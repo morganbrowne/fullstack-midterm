@@ -8,6 +8,7 @@ body {
     font-family: 'Lato', sans-serif;
     display: flex;
     color: #F6F6F6;
+    flex-direction: column;
 }
 
 .main-content {
@@ -20,4 +21,42 @@ body {
 
 .main-content h1 {
     font-size: 50px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgb(76, 0, 255);
+    color: #F6F6F6;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #F6F6F6;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    color: rgb(76, 0, 255);
+    background-color: #F6F6F6;
+    text-decoration: underline;
+}
+
+header nav ul li a:visited {
+    color: #F6F6F6;
+    text-decoration: none;
+    font-size: 18px;
 }

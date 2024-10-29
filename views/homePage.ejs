@@ -1,0 +1,15 @@
+<section class = "home">
+    <h1>Browse our collection of fan favourite movies!</h1>
+    <% random9Movies.forEach(movie => { %>}
+    <ul class="movie-list">
+        <h1><%= movie.title %></h1>
+        <li><strong>Release Year:</strong> <%= movie.releaseYear %></li>
+        <li><strong>Rating:</strong> <%= movie.rating %></li>
+        <li><strong>Description:</strong> <%= movie.description %></li>
+
+        <li>
+            <a href="/movie/<%= movie.id %>">More About This Movie</a>
+        </li>
+    </ul>)
+    <% }) %>
+</section>

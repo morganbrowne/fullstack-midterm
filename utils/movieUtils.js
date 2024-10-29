@@ -42,10 +42,25 @@ function selectRandomMovieId() {
     // Implementation here
 }
 
+// Random number of movies
+function randomNumOfMovies(numRequested) {
+    let randomMovieIdArr = [];
+    let randomMovieArr = [];
+    while (randomMovieIdArr.length < numRequested) {
+        const randomNum = Math.floor(Math.random() * Movies.length);
+        if (!randomMovieIdArr.includes(randomNum)) {
+            randomMovieIdArr.push(randomNum);
+        }
+    }
+    randomMovieArr = randomMovieIdArr.map((id) => Movies[id]);
+    return randomMovieArr;
+}
+
 // Export the functions to be used in other modules
 module.exports = {
     getMoviesByGenre,
     getTopRatedMovies,
     getMovieDetailsById,
     selectRandomMovieId,
+    randomNumOfMovies,
 };
