@@ -19,6 +19,9 @@ function getMoviesByGenre(genre, x) {
  * @returns {Array.<Movies>} - An array of top-rated movies
  */
 function getTopRatedMovies(x) {
+
+    const ratedMovies = Movies.filter(movie => movie.rating !== null);
+
     const topRatedMovies = Movies.sort((a, b) => b.rating - a.rating);
 
     // Return the first `x` movies
@@ -31,7 +34,8 @@ function getTopRatedMovies(x) {
  * @returns {Movies} - The movie object
  */
 function getMovieDetailsById(id) {
-    // Implementation here
+    const movie = Movies.find(movie => movie.id === parseInt(id));
+    return movie || null; // Return the movie or null if not found
 }
 
 /**
@@ -40,6 +44,10 @@ function getMovieDetailsById(id) {
  */
 function selectRandomMovieId() {
     // Implementation here
+    const randomIndex = Math.floor(Math.random() * Movies.length);
+    return Movies[randomIndex].id; // Return the ID of the randomly selected movie
+
+
 }
 
 // Random number of movies
